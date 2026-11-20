@@ -78,6 +78,7 @@ textarea{min-height:76px;resize:vertical}
 .answer{white-space:pre-wrap}
 details summary{cursor:pointer;font-weight:600}
 .vlist{margin:6px 0;padding-left:18px}
+.nn{display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-top:1px solid var(--line);padding:8px 0}
 a{color:var(--accent)}
 @media (prefers-reduced-motion:no-preference){.card.alert{animation:pop .35s ease-out}@keyframes pop{from{transform:scale(.97)}to{transform:none}}}
 </style>
@@ -111,7 +112,7 @@ a{color:var(--accent)}
 const TRIPS = {"denver": {"name": "Denver", "role": "test city", "accent": "en-US", "tz": "America/Denver", "center": {"lat": 39.7392, "lon": -104.9903}, "phrases": null, "dates": [], "places": [{"id": "den-museo", "name": "Museo de las Americas", "lat": 39.73005, "lon": -104.99888, "taste": 4, "tags": ["art", "culture"], "line": "Museo de las Americas is close, Latin American art on Santa Fe Drive.", "src": "https://en.wikipedia.org/wiki/Museo_de_las_Americas", "conf": "high", "address": "861 Santa Fe Dr"}, {"id": "den-central", "name": "Denver Central Market", "lat": 39.75944, "lon": -104.98472, "taste": 4, "tags": ["food"], "line": "Denver Central Market is close, a local food hall in RiNo.", "src": "https://en.wikipedia.org/wiki/Denver_Central_Market", "conf": "high", "address": "2669 Larimer St"}, {"id": "den-fivepoints", "name": "Five Points", "lat": 39.7547, "lon": -104.9781, "taste": 4, "tags": ["music", "culture"], "line": "You're near Five Points, Denver's historic jazz neighborhood.", "src": "https://en.wikipedia.org/wiki/Five_Points,_Denver", "conf": "low", "address": null, "note": "Pin is the neighborhood center, not a street corner."}, {"id": "den-still", "name": "Clyfford Still Museum", "lat": 39.73632, "lon": -104.99198, "taste": 3, "tags": ["art"], "line": "The Clyfford Still Museum is close, a whole museum for one abstract painter.", "src": "https://en.wikipedia.org/wiki/Clyfford_Still_Museum", "conf": "high", "address": "1250 Bannock St"}, {"id": "den-mca", "name": "Museum of Contemporary Art Denver", "lat": 39.7525, "lon": -105.004, "taste": 3, "tags": ["art"], "line": "MCA Denver is close, a small museum of current art.", "src": "https://en.wikipedia.org/wiki/Museum_of_Contemporary_Art_Denver", "conf": "med", "address": "1485 Delgany St"}, {"id": "den-kirkland", "name": "Kirkland Museum of Fine and Decorative Art", "lat": 39.735, "lon": -104.99, "taste": 3, "tags": ["art", "design"], "line": "The Kirkland Museum is close, art and design objects in the Golden Triangle.", "src": "https://en.wikipedia.org/wiki/Kirkland_Museum_of_Fine_%26_Decorative_Art", "conf": "med", "address": "1201 Bannock St"}, {"id": "den-dam", "name": "Denver Art Museum", "lat": 39.73719, "lon": -104.98935, "taste": 2, "tags": ["art", "classic"], "line": "The Denver Art Museum is close. Big and curated.", "src": "https://en.wikipedia.org/wiki/Denver_Art_Museum", "conf": "high", "address": "100 W 14th Ave Pkwy"}, {"id": "den-union", "name": "Denver Union Station", "lat": 39.75306, "lon": -105.0, "taste": 1, "tags": ["transit", "classic"], "line": "Union Station is close, the downtown train hall.", "src": "https://en.wikipedia.org/wiki/Denver_Union_Station", "conf": "high", "address": "1701 Wynkoop St"}, {"id": "den-larimer", "name": "Larimer Square", "lat": 39.74889, "lon": -104.99861, "taste": 1, "tags": ["classic"], "line": "Larimer Square is close, a historic block of shops and restaurants.", "src": "https://en.wikipedia.org/wiki/Larimer_Square", "conf": "high", "address": null}], "docs": [{"label": "Passport or ID", "where": "Wherever you keep it", "when": "Open your private plans link to see your own list"}], "areas": [{"id": "den-area-baker", "name": "Baker", "lat": 39.7239, "lon": -104.9952, "area": true, "src": "https://en.wikipedia.org/wiki/Baker,_Denver"}, {"id": "den-area-lincolnpark", "name": "La Alma / Lincoln Park", "lat": 39.7353, "lon": -105.00408, "area": true, "src": "https://mapcarta.com/23202744"}, {"id": "den-area-capitolhill", "name": "Capitol Hill", "lat": 39.7338, "lon": -104.9823, "area": true, "src": "https://en.wikipedia.org/wiki/Capitol_Hill,_Denver"}, {"id": "den-area-lodo", "name": "LoDo", "lat": 39.75095, "lon": -104.9997, "area": true, "src": "https://mapcarta.com/N3115065344"}, {"id": "den-area-highland", "name": "Highland", "lat": 39.76156, "lon": -105.01104, "area": true, "src": "https://mapcarta.com/W429975608"}, {"id": "den-area-civiccenter", "name": "Civic Center", "lat": 39.73917, "lon": -104.98911, "area": true, "src": "https://mapcarta.com/25041848"}, {"id": "den-area-artdistrict", "name": "Art District on Santa Fe", "lat": 39.72975, "lon": -104.99863, "area": true, "src": "https://mapcarta.com/W512990868"}]}, "vienna": {"name": "Vienna", "role": null, "accent": "de-AT", "tz": "Europe/Vienna", "center": {"lat": 48.2082, "lon": 16.3738}, "phrases": "de", "dates": [], "places": [{"id": "vie-brunnenmarkt", "name": "Brunnenmarkt", "lat": 48.21203, "lon": 16.33576, "taste": 5, "tags": ["market", "food"], "line": "Brunnenmarkt is close, Vienna's long street market with Turkish and Balkan food.", "src": "https://de.wikipedia.org/wiki/Brunnenmarkt", "conf": "high", "address": "Brunnengasse, 1160", "hoursText": "Reported Mon to Fri about 6:00 to 18:30, sources vary (trip notes, Nov 17)", "price": "Kebab or breakfast plate about 6 to 10 EUR (estimate)"}, {"id": "vie-ottakringer", "name": "Ottakringer Brauerei", "lat": 48.2127, "lon": 16.3243, "taste": 3, "tags": ["food", "local"], "line": "The Ottakringer brewery is close, next to the Brunnenmarkt area.", "src": "https://de.wikipedia.org/wiki/Ottakringer_Brauerei", "conf": "med", "address": null, "note": "Tours and prices not checked."}, {"id": "vie-hbf", "name": "Wien Hauptbahnhof", "lat": 48.18667, "lon": 16.38, "taste": 1, "tags": ["transit"], "line": "Wien Hauptbahnhof, the main train station, is close.", "src": "https://en.wikipedia.org/wiki/Wien_Hauptbahnhof", "conf": "high", "address": null}, {"id": "vie-brunnenpassage", "name": "Brunnenpassage", "lat": null, "lon": null, "taste": 5, "tags": ["art made here"], "line": "Brunnenpassage, a neighborhood art space in the old market hall.", "src": null, "conf": "med", "address": "Brunnengasse 71, 1160 Wien", "hoursText": "Listed Tue to Fri 12:00 to 18:00 (trip notes, MED)", "note": " Map pin not set yet, so it can't alert. Directions open a map search."}, {"id": "vie-yppenplatz", "name": "Yppenplatz", "lat": null, "lon": null, "taste": 4, "tags": ["food", "local"], "line": "Yppenplatz, the cafe square at the top of Brunnengasse.", "src": null, "conf": "high", "address": "Yppenplatz, 1160 Wien", "note": " Map pin not set yet, so it can't alert. Directions open a map search."}, {"id": "vie-flohmarkt", "name": "Naschmarkt flea market", "lat": 48.19663, "lon": 16.35809, "taste": 5, "tags": ["market", "art"], "line": "The Naschmarkt flea market, about 400 stalls every Saturday.", "src": "https://www.openstreetmap.org/node/3993342689", "conf": "high", "address": "Kettenbrückengasse, 1050 Wien", "hoursText": "Saturdays from 06:30, ends about 14:00 (trip notes)"}, {"id": "vie-wuk", "name": "WUK", "lat": 48.22306, "lon": 16.35111, "taste": 5, "tags": ["art made here", "music"], "line": "WUK, the self-run art and culture center.", "src": "https://de.wikipedia.org/wiki/WUK_(Kulturzentrum)", "conf": "med", "address": "Währinger Straße 59, 1090 Wien"}, {"id": "vie-donaukanal", "name": "Donaukanal graffiti walls", "lat": 48.21171, "lon": 16.37766, "taste": 5, "tags": ["street art"], "line": "The Donaukanal walls, a legal graffiti zone that changes all the time.", "src": "https://mapcarta.com/31566684", "conf": "high", "address": "Schwedenplatz, 1010 Wien"}, {"id": "vie-secession", "name": "Secession", "lat": 48.2005, "lon": 16.36578, "taste": 3, "tags": ["art", "classic"], "line": "The Secession, home of Klimt's Beethoven Frieze.", "src": "https://mapcarta.com/25055666", "conf": "high", "address": "Friedrichstraße 12, 1010 Wien", "hours": [{"d": [2, 3, 4, 5, 6, 0], "o": "10:00", "c": "18:00"}], "hoursText": "Tue to Sun 10:00 to 18:00 (official site, per trip notes)", "price": "13.00 EUR (official site, per trip notes)"}], "docs": [{"label": "Passport or ID", "where": "Wherever you keep it", "when": "Open your private plans link to see your own list"}]}, "prague": {"name": "Prague", "role": null, "accent": "cs-CZ", "tz": "Europe/Prague", "center": {"lat": 50.0755, "lon": 14.4378}, "phrases": "cs", "dates": [], "places": [{"id": "prg-zizkovtower", "name": "Žižkov Television Tower", "lat": 50.08083, "lon": 14.45139, "taste": 2, "tags": ["landmark"], "line": "The Žižkov TV tower is close, the odd tower over the bohemian district.", "src": "https://en.wikipedia.org/wiki/%C5%BDi%C5%BEkov_Television_Tower", "conf": "high", "address": null}, {"id": "prg-hln", "name": "Praha hlavní nádraží", "lat": 50.08306, "lon": 14.43583, "taste": 1, "tags": ["transit"], "line": "Prague's main train station is close.", "src": "https://en.wikipedia.org/wiki/Prague_main_railway_station", "conf": "high", "address": null}, {"id": "prg-dox", "name": "DOX Centre for Contemporary Art", "lat": 50.10679, "lon": 14.44756, "taste": 4, "tags": ["art"], "line": "DOX, contemporary art with a political edge, off the tourist track.", "src": "https://mapcarta.com/N475376666", "conf": "high", "address": "Poupětova 1, Praha 7", "hours": [{"d": [2, 3, 4, 5, 6, 0], "o": "11:00", "c": "19:00"}], "hoursText": "Tue to Sun 11:00 to 19:00 (dox.cz, Nov 18)", "price": "Adult 360 CZK (dox.cz, Nov 18)"}, {"id": "prg-kasarna", "name": "Kasárna Karlín", "lat": null, "lon": null, "taste": 5, "tags": ["art made here", "music"], "line": "Kasárna Karlín, old barracks run by an artist collective.", "src": null, "conf": "low", "address": "Prvního pluku 20/2, Praha 8", "hoursText": "Bar hours not found (kasarnakarlin.cz, Nov 18)", "note": " Map pin not set yet, so it can't alert. Directions open a map search."}], "docs": [{"label": "Passport or ID", "where": "Wherever you keep it", "when": "Open your private plans link to see your own list"}]}};
 const BUNDLED_EVENTS = [];
 const PHRASES = {"de": {"name": "German", "voice": "de-AT", "gt": "de", "tip": "For a real conversation, Apple's Translate app does live German. Austria says Grüß Gott and Servus more than Hallo.", "items": [{"en": "Hello (polite)", "loc": "Grüß Gott", "say": "grooss got"}, {"en": "Hi, or bye (casual)", "loc": "Servus", "say": "ZEHR-voos"}, {"en": "Thank you very much", "loc": "Danke schön", "say": "DAHN-keh shern"}, {"en": "Please, or you're welcome", "loc": "Bitte", "say": "BIT-teh"}, {"en": "Excuse me", "loc": "Entschuldigung", "say": "ent-SHOOL-dee-goong"}, {"en": "Do you speak English?", "loc": "Sprechen Sie Englisch?"}, {"en": "I don't speak German", "loc": "Ich spreche kein Deutsch."}, {"en": "Did you make this?", "loc": "Haben Sie das gemacht?"}, {"en": "It's beautiful", "loc": "Das ist wunderschön."}, {"en": "How much is it?", "loc": "Was kostet das?"}, {"en": "Can I pay by card?", "loc": "Kann ich mit Karte zahlen?"}, {"en": "The bill, please", "loc": "Zahlen, bitte."}, {"en": "A Viennese coffee with milk", "loc": "Eine Melange, bitte."}, {"en": "A glass of tap water, please", "loc": "Ein Glas Leitungswasser, bitte."}, {"en": "Where is the train station?", "loc": "Wo ist der Bahnhof?"}]}, "cs": {"name": "Czech", "voice": "cs-CZ", "gt": "cs", "tip": "Apple's Translate app has no Czech. Google Translate does, and it can work offline if you download Czech before the trip.", "items": [{"en": "Hello (polite)", "loc": "Dobrý den", "say": "DOH-bree den"}, {"en": "Hi, or bye (casual)", "loc": "Ahoj", "say": "AH-hoy"}, {"en": "Thank you", "loc": "Děkuji", "say": "DYEH-koo-yih"}, {"en": "Please, or you're welcome", "loc": "Prosím", "say": "PROH-seem"}, {"en": "Excuse me", "loc": "Promiňte", "say": "PROH-min-teh"}, {"en": "Do you speak English?", "loc": "Mluvíte anglicky?"}, {"en": "I don't speak Czech", "loc": "Nemluvím česky."}, {"en": "Is this your work?", "loc": "Je to vaše práce?"}, {"en": "It's beautiful", "loc": "Je to krásné."}, {"en": "How much is it?", "loc": "Kolik to stojí?"}, {"en": "Can I pay by card?", "loc": "Můžu platit kartou?"}, {"en": "The bill, please", "loc": "Zaplatím, prosím."}, {"en": "One beer, please", "loc": "Jedno pivo, prosím."}, {"en": "Where is the main station?", "loc": "Kde je hlavní nádraží?"}, {"en": "Goodbye", "loc": "Na shledanou.", "say": "nah SKHLEH-dah-noh-oo"}]}};
-const BUILD = {"kind": "hosted", "version": "0.5 (Nov 20, 2026)", "limits": ["Ask copies your question with your location so you can paste it into Claude Duet. The in-app answer only works in the Claude copy.", "Translator here uses MyMemory, a free service (about 5,000 characters a day). What you translate is sent to it. The Claude copy translates with Claude instead.", "Talk button: uses Safari's own speech listening. Safari asks for the microphone the first time.", "Your trip dates, papers and hostels are not in this public page. Open your private plans link once to add them on this phone.", "Works offline after the first visit, except weather, directions and Ask.", "Alerts and nudges only work while this page is open on screen. Locking the phone or switching apps pauses them. The real iPhone app fixes this later.", "Walking times are rough: straight-line distance plus a margin, not a real route.", "Places with no map pin yet show in lists but can't alert.", "Nothing here books or pays for anything."]};
+const BUILD = {"kind": "hosted", "version": "0.6 (Nov 20, 2026)", "limits": ["Ask copies your question with your location so you can paste it into Claude Duet. The in-app answer only works in the Claude copy.", "Translator here uses MyMemory, a free service (about 5,000 characters a day). What you translate is sent to it. The Claude copy translates with Claude instead.", "Talk button: uses Safari's own speech listening. Safari asks for the microphone the first time.", "Your trip dates, papers and hostels are not in this public page. Open your private plans link once to add them on this phone.", "Works offline after the first visit, except weather, directions and Ask.", "Alerts and nudges only work while this page is open on screen. Locking the phone or switching apps pauses them. The real iPhone app fixes this later.", "Walking times are rough: straight-line distance plus a margin, not a real route.", "Places with no map pin yet show in lists but can't alert.", "Nothing here books or pays for anything."]};
 
 /* ===================== Storage (per phone) ===================== */
 const S = {
@@ -320,18 +321,46 @@ function pickSpot(id){
   if (!p) return;
   if (!state.walking) startWalk();
   S.set("spot." + state.trip, p.id);
+  state.spotsOpenUntil = 0;
   setPos({ lat: p.lat, lon: p.lon, acc: 0, ts: Date.now(), source: "manual", spot: p.id, name: p.name });
 }
-function setPos(pos){
+/* GPS fixes come every second or two. Redraw when you've moved about 25 m, every 15 s, or on Refresh,
+   so the screen follows you without jumping on every fix. */
+function setPos(pos, force){
+  const first = !state.pos || state.pos.source !== pos.source;
   state.pos = pos;
   if (pos.source === "gps" && settings.autoTrip) autoTrip();
   tick();
+  const L = state.lastDraw;
+  if (pos.source !== "gps" || first || force || state.dirty || !L || distM(L, pos) >= 25 || Date.now() - L.at >= 15000) {
+    state.lastDraw = { lat: pos.lat, lon: pos.lon, at: Date.now() }; state.dirty = false; render();
+  } else { const st = statusLine(); $("#dot").className = "dot " + st.cls; $("#statusText").textContent = st.text; }
+}
+function ago(ts){ const s = Math.round((Date.now() - ts) / 1000); return s < 10 ? "just now" : s < 60 ? s + " sec ago" : Math.round(s / 60) + " min ago"; }
+function liveGps(){ return !MANUAL && "geolocation" in navigator && !state.gpsBlocked; }
+function fromLine(){
+  if (!state.pos) return "";
+  return state.pos.source === "gps" ? "From where you are now (GPS, within " + state.pos.acc + " m), updated " + ago(state.pos.ts) + "." : "From " + (state.pos.name || "your spot") + ", the last spot you tapped.";
+}
+function refreshNear(){
+  if (liveGps()) {
+    if (!state.walking) { startWalk(); return; }
+    toast("Finding you...");
+    try { navigator.geolocation.getCurrentPosition(p => { state.gpsBlocked = false; setPos({ lat: p.coords.latitude, lon: p.coords.longitude, acc: Math.round(p.coords.accuracy || 0), ts: Date.now(), source: "gps" }, true); toast("Updated"); }, onPosErr, { enableHighAccuracy: true, maximumAge: 0, timeout: 15000 }); }
+    catch (e) { onPosErr({ code: 1 }); }
+    return;
+  }
+  const saved = (state.pos && state.pos.spot) || S.get("spot." + state.trip, "");
+  if (!state.pos && saved && spots().some(p => p.id === saved)) pickSpot(saved);
+  state.spotsOpenUntil = Date.now() + 300000;
   render();
+  const c = $("#spotCard"); c && c.scrollIntoView && c.scrollIntoView({ block: "start" });
+  toast("Tap the spot you're at now");
 }
 function autoTrip(){
   let best = null, bestD = Infinity;
   for (const [k, t] of Object.entries(TRIPS)) { const d = distM(state.pos, t.center); if (d < bestD) { bestD = d; best = k; } }
-  if (best && best !== state.trip && bestD < 80000) { state.trip = best; S.set("trip", best); toast("Switched to " + TRIPS[best].name); }
+  if (best && best !== state.trip && bestD < 80000) { state.trip = best; S.set("trip", best); state.dirty = true; toast("Switched to " + TRIPS[best].name); }
 }
 
 /* ===================== Opening hours ===================== */
@@ -371,6 +400,7 @@ function alertSentence(p){ const m = walkMin(p.d); return p.line + " About " + m
 function fireAlert(p){
   const d = daily(); d.count++; d.alerts.push(p.id); saveDaily(d);
   const seen = alertedSet(); seen.add(p.id); S.set("alerted." + state.trip, [...seen]);
+  state.dirty = true;
   state.lastAlert = { id: p.id, name: p.name, sentence: alertSentence(p), at: Date.now(), place: p };
   chime();
   if (settings.mode === "A") setTimeout(() => speak(state.lastAlert.sentence), 900);
@@ -514,7 +544,7 @@ function chip(p, extra){
 function spotCard(){
   const here = state.pos && state.pos.source === "manual" ? state.pos : null;
   const all = spots();
-  let h = '<div class="card"><div class="label">' + (here ? "You're at" : "Where are you?") + "</div>";
+  let h = '<div class="card" id="spotCard"><div class="label">' + (here ? "You're at" : "Where are you?") + "</div>";
   if (here) {
     h += "<h2>" + esc(here.name) + "</h2>";
     const next = all.filter(p => p.id !== here.spot).map(p => ({ p, d: distM(here, p) })).sort((a, b) => a.d - b.d).slice(0, 6);
@@ -523,10 +553,23 @@ function spotCard(){
     h += '<p class="small muted">' + (MANUAL ? "Claude pages can't read your GPS, so tap the spot you're at. Tap again each time you arrive somewhere." : "Your phone didn't share its location. Tap a spot, or allow location for this site in Settings, Safari.") + "</p>";
   }
   const areas = all.filter(p => p.area), places = all.filter(p => !p.area);
-  h += '<details' + (here ? "" : " open") + '><summary>All spots in ' + esc(trip().name) + "</summary>" +
+  const openAll = !here || (state.spotsOpenUntil || 0) > Date.now();
+  h += '<details id="allSpots"' + (openAll ? " open" : "") + '><summary>All spots in ' + esc(trip().name) + "</summary>" +
     (areas.length ? '<div class="small muted" style="margin-top:8px">Neighborhoods</div><div class="spots">' + areas.map(p => chip(p)).join("") + "</div>" : "") +
     '<div class="small muted" style="margin-top:8px">Places</div><div class="spots">' + places.map(p => chip(p)).join("") + chip({ id: "__center", name: trip().name + " center" }) + "</div></details></div>";
   return h;
+}
+function nearNowCard(){
+  const btn = '<button class="btn" id="refreshNear">' + (liveGps() ? (state.walking ? "Refresh" : "Start walk and find me") : "I've moved") + "</button>";
+  if (!state.pos) {
+    if (!liveGps()) return "";
+    return '<div class="card" id="nearNow"><div class="label">Near you now</div><p class="small muted">' + (state.walking ? "Finding you..." : "Start a walk. This list then follows you as you move, starting from where you are.") + '</p><div class="row">' + btn + "</div></div>";
+  }
+  const list = nearbyList().filter(p => p.d != null).slice(0, 5);
+  return '<div class="card" id="nearNow"><div class="label">Near you now</div><p class="small muted">' + esc(fromLine()) + "</p>" +
+    list.map(p => '<div class="nn"><div><b>' + esc(p.name) + '</b>' + (p.open === true ? ' <span class="pill go">Open now</span>' : "") + '</div><div class="small muted">' + fmtDist(p.d) + ", about " + walkMin(p.d) + " min walk</div></div>").join("") +
+    '<div class="row">' + btn + '<button class="btn" data-tab="near">See all</button></div>' +
+    (liveGps() ? '<p class="small muted">Updates by itself as you walk, about every 25 m.</p>' : "") + "</div>";
 }
 function viewNow(){
   const d = daily(), a = state.lastAlert;
@@ -540,6 +583,7 @@ function viewNow(){
     "</div></div>" +
     '<p class="small muted">Keep this screen open while you walk. Locking the phone pauses alerts.</p></div>';
   if (MANUAL || state.gpsBlocked || (state.pos && state.pos.source === "manual")) h += spotCard();
+  h += nearNowCard();
   if (a && Date.now() - a.at < 30 * 60000) {
     h += '<div class="card alert"><div class="label">Nearby, ' + esc(fmtTime(new Date(a.at))) + '</div><h2>' + esc(a.name) + '</h2><p>' + esc(a.sentence) + '</p>' +
       '<div class="row"><a class="btn primary" href="' + esc(mapsLink(a.place)) + '" target="_blank" rel="noopener">Walk there</a><button class="btn" id="sayAlert">' + (settings.mode === "B" ? "What was that?" : "Say it again") + '</button><button class="btn" id="dismissAlert">Not now</button></div></div>';
@@ -569,8 +613,10 @@ function placeRow(p){
 }
 function viewNear(){
   const list = nearbyList();
-  let h = '<div class="card"><h2>' + (state.pos ? "Closest first" : "Best matches first") + '</h2>' +
-    (state.pos ? "" : '<p class="small muted">Start a walk to sort by distance.</p>') + list.map(placeRow).join("") + "</div>";
+  let h = '<div class="card" id="nearList"><h2>' + (state.pos ? "Closest first" : "Best matches first") + '</h2>' +
+    (state.pos ? '<p class="small muted">' + esc(fromLine()) + "</p>" : '<p class="small muted">Start a walk to sort by distance.</p>') +
+    '<div class="row"><button class="btn" id="refreshNear">' + (liveGps() ? (state.walking ? "Refresh" : "Start walk and find me") : "I've moved") + "</button></div>" +
+    list.map(placeRow).join("") + "</div>";
   h += '<div class="card"><div class="label">Test pins</div><p class="small">Drop a pin where you stand, walk away, then come back. The alert should fire as you get close.</p>' +
     '<input type="text" id="pinName" placeholder="Name this spot, e.g. Corner coffee">' +
     '<div class="row"><button class="btn primary" id="dropPin">Drop a pin here</button><button class="btn" id="resetAlerts">Let places alert again</button></div></div>';
@@ -778,6 +824,7 @@ document.addEventListener("click", e => {
   unlockAudio();
   if (b.dataset.tab) { state.tab = b.dataset.tab; render(); window.scrollTo(0, 0); return; }
   if (b.id === "walkBtn") return state.walking ? stopWalk() : startWalk();
+  if (b.id === "refreshNear") { if (!liveGps()) state.tab = "now"; return refreshNear(); }
   if (b.dataset.spot) { pickSpot(b.dataset.spot); window.scrollTo(0, 0); return; }
   if (b.id === "hushBtn") return hush();
   if (b.dataset.mode) { settings.mode = b.dataset.mode; saveSettings(); render(); return; }
@@ -837,6 +884,7 @@ function showBig(it){
   document.body.appendChild(d);
   d.querySelector("#hearBig").onclick = () => it.voice === "en" ? speak(it.loc, null, { slow: true }) : speak(it.loc, PHRASES[curLang()].voice, { slow: true });
 }
+document.addEventListener("toggle", e => { if (e.target && e.target.id === "allSpots" && state.pos && state.pos.source === "manual") state.spotsOpenUntil = e.target.open ? Date.now() + 300000 : 0; }, true);
 document.addEventListener("change", e => {
   const t = e.target;
   if (t.id === "tripSel") { state.trip = t.value; S.set("trip", t.value); langPick = null; if (state.pos && state.pos.source === "manual") state.pos = null; state.lastAlert = null; render(); return; }
@@ -889,5 +937,9 @@ if ("speechSynthesis" in window) try { speechSynthesis.getVoices(); speechSynthe
   } catch (e) {}
 })();
 if (BUILD.kind === "hosted" && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+/* If the phone opened an older saved copy, reload once to get the newest version. */
+if (BUILD.kind === "hosted" && window.fetch) fetch("version.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(j => {
+  if (j && j.v && j.v !== BUILD.version) { let done = false; try { done = sessionStorage.getItem("reloadedFor") === j.v; sessionStorage.setItem("reloadedFor", j.v); } catch (e) {} if (!done) location.reload(); }
+}).catch(() => {});
 </script>
 </body></html>
